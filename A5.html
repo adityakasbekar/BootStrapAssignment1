@@ -10,12 +10,13 @@
    
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <!-- jQuery library -->
+    
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <style>
       img:hover {
       	opacity:0.8;
@@ -26,21 +27,60 @@
       #lightup:hover{
       	color:white;
       }
+      #myname{
+        color:#E0E0E0;
+      }
+      #myname:hover{
+      	font-family: 'Nunito', sans-serif;
+      }
+      #morebutton:hover{
+        background-color:#EEEEEE;
+        color:black;
+      }      
     </style>
+    
+    <script>
+      $(document).ready(function(){
+        // Add smooth scrolling to all links
+        $("a").on('click', function(event) {
+
+          // Make sure this.hash has a value before overriding default behavior
+          if (this.hash !== "") {
+            // Prevent default anchor click behavior
+            event.preventDefault();
+
+            // Store hash
+            var hash = this.hash;
+
+            // Using jQuery's animate() method to add smooth page scroll
+            // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+            $('html, body').animate({
+              scrollTop: $(hash).offset().top
+            }, 800, function(){
+
+              // Add hash (#) to URL when done scrolling (default click behavior)
+              window.location.hash = hash;
+            });
+          } // End if
+        });
+      });
+	</script>
+    
   </head>
   <body>
-    <div class="container-fluid" style="font-family: 'Montserrat', sans-serif;">
-      <div class="jumbotron ">
+    <div class="container-fluid" style="font-family: 'Montserrat', sans-serif;" id="top">
+      <div class="jumbotron" style="background-color:#2F353E; color:#EEEEEE;">
         <div class="row">
           	<div class="col-lg-3" style="color:black ;">
-              <H4 style="display:inline;  float:left;">ADITYA KASBEKAR</H4>        
+              <H4 style="display:inline;  float:left;" id="myname">ADITYA KASBEKAR</H4>        
           </div>
             <div class="col-lg-9">
                 <H4 style="display:inline; float:right">
-                <a href="#aboutme">ABOUT ME</a> |
-                <a href="#achievements">ACHIEVEMENTS</a> |
-                <a href="#work">WORK</a> |
-                <a href="#education">EDUCATION</a>                
+                	<a href="#work">WORK</a> |
+                  	<a href="#project">PROJECT</a> |
+                  	<a href="#aboutme">ABOUT ME</a> |
+                	<a href="#education">EDUCATION</a> |
+                  	<a href="#achievements">ACHIEVEMENTS</a>               
               </H4>                
           	</div>
         </div>
@@ -51,35 +91,73 @@
         <BR/>
         <H4>Developer | Photographer | Stargazer</H4>
         <br/>
-        <button type="button" class="btn btn-default">    
+        <button type="button" class="btn btn-default" id="morebutton" style="background-color:transparent; color:#EEEEEE; border-width:3px">     
 			MORE
   		</button>
         </div>
       </div>
-      <div id="work"  class="row" style="background-color:black; color:white; padding:50px; margin-up:5%; margin-down:5%;">        
+      <div id="work"  class="row" style="background-color:white; color:black; padding:70px; margin-up:5%; margin-down:5%;">        
         <div class="col-lg-12 text-center" >
           <h2>WORK</h2><br/>
-          <p>I'm currently working in TATA Consultancy Services as Assistant System Engineer.<br/> My current work is to learn the concepts of MS Azure. </p>
+          <p>I'm currently working with TATA Consultancy Services as Assistant System Engineer.<br/> My current work is to learn the concepts of MS Azure. </p>
           
         </div>
       </div>
-      <div id="education" class="row" style="background-color:black; color:white; padding:70px;margin-up:">
+      <br/><br/><br/>
+      <div id="project" class="row" style="background-color:black; color:white; padding:70px;margin-up:">
         <div class="col-lg-12 text-center" >
-          <h2>EDUCATION</h2><br/>
-          <p>I did my education from Indore.<br/> I've done my B.E. in Information Technology.<br/> During my college days, I worked on C, C++, C#, Java, HTML, CSS, and JavaScript.</p>
+          <h2>PROJECTS</h2><br/>
+          <br/>
+          <div class="row">
+            <div class="col-lg-4">
+              <DL class="list-group">
+            <DT>SEARCH-IT
+              </DT>
+              <DD>
+                A website designed to scan all the webpages present on the system for any jumbled pattern of words, that are provided by the user. Finally, the user is provided with a list of all the pages that actually contains those words.
+            </DD>            
+          </DL>
+              </div>
+            <div class="col-lg-4">
+              <DL class="list-group">
+            <DT>AFORGEN
+              </DT>
+              <DD>
+                Remember, how you used to do the formatting before publishing your work to IEEE, SEM, and other institutes? Well, now you only have to provide your text, images, tables, and other document related stuff, and AFORGEN will do the rest!
+            </DD>            
+          </DL>
+              </div>
+            <div class="col-lg-4">
+              <DL class="list-group">
+            <DT>FIT4LIFE</DT>
+              </DT>
+              <DD>
+                Web application designed to manage all the Fit 4 Life events. The application takes care of maintaining all the records related to Fit 4 Life. Managing and storing information related to participants is taken care of, by using this application.
+            </DD>            
+          </DL>
+              </div>
+            </div>
+          
           
         </div>
       </div>
       
-      <div id="aboutme" class="row" style="padding:50px">        
-        <div class="col-lg-6 text-center" >
+      <div id="aboutme" class="row" style="padding:50px;">        
+        <div class="col-lg-4 text-center" >
           <h2>ABOUT ME</h2><br/>
           <p>Hello there &#9786; It all began on APRIL 26<sup>th</sup><br/><br/>
             I LIKE<br/>
           	 reading | photography | stargazing | riding bikes | travelling | coffee
           </p>
         </div>
-        <div id="achievements" class="col-lg-6 text-center" >
+        
+        <div id="education" class="col-lg-4 text-center" >
+          <h2>EDUCATION</h2><br/>
+          <p>I did my education from Indore.<br/> I've done my B.E. in Information Technology.<br/> During my college days, I worked on C, C++, C#, Java, HTML, CSS, and JavaScript.</p>
+          
+        </div>
+        
+        <div id="achievements" class="col-lg-4 text-center" ">
           <h2>ACHIEVEMENTS</h2><br/>
           <p>
             I'm an ORACLE Certified Associate JAVA SE 7 Programmer.<br/>
@@ -117,7 +195,7 @@
   			</a>
        </div>
         <div class="col-lg-4"> 
-          <img alt="ADITYA" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAbiAAAAJGNkZDQ5ZmU4LWZiZWMtNDk1Mi05MTk5LTI4YTc3YTE5NThhZg.jpg" class="img-circle"><br/>
+          <a href="#top" id="gototop"><img alt="ADITYA" src="https://media.licdn.com/mpr/mpr/shrink_100_100/AAEAAQAAAAAAAAbiAAAAJGNkZDQ5ZmU4LWZiZWMtNDk1Mi05MTk5LTI4YTc3YTE5NThhZg.jpg" class="img-circle"></a></d><br/>
           <strong>ADITYA KASBEKAR</strong><br/>
           Born: April 26<sup>th</sup> 1994<br/>
           Languages Known: Marathi, Hindi, English<br/>
