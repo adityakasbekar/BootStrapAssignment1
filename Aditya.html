@@ -31,7 +31,11 @@
         }
 
         #lightup:hover {
-            color: white;
+            
+			animation-name: fontsize_effect;
+			animation-duration: 2s;
+			font-size: 18px;
+			
         }
 
         #myname {
@@ -46,6 +50,34 @@
             background-color: #EEEEEE;
             color: black;
         }
+		
+		#mypic:hover {
+			animation-name: rot_effect;
+			animation-duration: 2s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+		}
+		
+		
+		@keyframes fontsize_effect{
+			from{
+				font-size: 14px;
+			}
+			to{
+				font-size: 18px;	
+				color: white;
+			}
+		}
+		
+		@keyframes rot_effect{
+			from{
+				transform: rotateY(0deg);
+			}
+			to{
+				transform: rotateY(180deg);
+			}
+		}
+		
 /*
         #dev:hover:after {
             content: url(oracle_associate.png); /* no need for qoutes */
@@ -259,7 +291,7 @@
             </div>
 
             <div class="col-lg-4">
-                <a href="#top" id="gototop"><img alt="ADITYA" src="2016-04-27-22-20-38-289.jpg" class="img-circle" height="100px"></a></d><br />
+                <a href="#top" id="gototop"><img alt="ADITYA" src="2016-04-27-22-20-38-289.jpg" id="mypic" class="img-circle" height="100px"></a></d><br />
                 <strong>ADITYA KASBEKAR</strong><br />
                 Born: April 26<sup>th</sup> 1994<br />
                 Languages Known: Marathi, Hindi, English<br />
