@@ -1,0 +1,209 @@
+body{
+     font-family: 'Nunito', sans-serif;
+     background: url('back.jpg') no-repeat fixed;
+     background-size: auto 70vh;
+     background-position: right;
+      
+}
+
+.main{
+	height: 100vh;
+}
+
+.header{
+	background-color: #160A47;
+	color: 	white;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+#profile-pic{
+    height: 150px;
+    border-radius: 5px;	
+}
+
+button:focus{
+	outline: none;
+}
+
+#header-text{
+	font-size: 36px;
+}
+#header-text:hover{
+	
+	transition: all .2s ease-in-out;
+}
+
+#header-text-1{
+	font-size: 20px;
+	transition: font-size,opacity 300ms;
+}
+
+.navbar-custom{
+	background-color: #160A47;
+	color: 	white;
+	border-radius: 0px;
+	border: none;
+}
+
+#basic-info{
+	font-size: 20px;
+}
+
+#basic-info:hover .glow{
+	color: #F2671F;
+	transition: color 300ms;
+}
+
+.glow{
+	color: black;
+	transition: color 300ms;
+}
+
+.info-border-left{
+	border: none;
+	border-left: 2px solid #60047A;
+	box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+	padding: 5%;
+	margin: 1%;
+	background-color: white;
+	width: 100%;
+	height: 100px;
+}
+
+#work, #education, #achievements, #hobbies, #my-projects, #songs-by-me{
+	color: white;
+	transition: all .2s ease-in-out;
+}
+
+#work{
+	transform: rotate(20deg);
+	background: white url('work.jpg');
+	background-size: 100% 100%;
+}
+
+#education{
+	transform: rotate(-20deg);
+	background: white url('education.jpg');
+	background-size: 100% 100%;
+}
+
+#achievements{
+	transform: rotate(0deg);
+	background: white url('achievements.jpg');
+	background-size: 100% 100%;
+}
+
+#hobbies{
+	transform: rotate(0deg);
+	background: white url('hobbies_1.jpg');
+	background-size: 100% 100%;
+}
+
+#my-projects{
+	transform: rotate(-20deg);
+	background: white url('projects.jpg');
+	background-size: 100% 100%;
+}
+
+#songs-by-me{
+	transform: rotate(20deg);
+	background: white url('songs.jpg');
+	background-size: 100% 100%;
+}
+
+#work:hover, #education:hover, #my-projects:hover, #songs-by-me:hover{
+	transform: scale(1.0);
+	z-index: 9999;
+}
+
+#achievements:hover{
+	transform: rotate(-20deg);
+	z-index: 9999;
+}
+
+#hobbies:hover{
+	transform: rotate(20deg);
+	z-index: 9999;
+}
+
+.optionss{
+	font-size: 15px;
+	color: white;
+	opacity: .6;
+}
+
+.optionss:hover{
+	font-size: 15px;
+	color: white;
+	opacity: 1.0;
+}
+
+#options>a:link{
+	text-decoration: none;
+}
+
+#options>a:visited{
+	text-decoration: none;
+	font-size: 15px;
+	color: white;
+	opacity: .6;
+}
+
+#options>a:hover{
+	text-decoration: none;
+}
+
+#options>a:active{
+	text-decoration: none;
+}
+
+
+
+.contact-tata:hover{
+	font-size: 35px;	
+	transition: all .2s ease-in-out;
+}
+
+.contact-tata{
+	color: blue;
+	font-size: 25px;
+	transition: all .2s ease-in-out;
+}
+
+.icon{
+	width: 50px;
+	height: 50px;
+}
+
+.center-connect{
+	margin-left: 37%;
+	margin-right: 37%;
+}
+
+#twitter, #facebook, #youtube, #linkedin{
+	transition: all .4s ease-in-out;
+}
+
+#twitter:hover, #facebook:hover, #youtube:hover, #linkedin:hover{
+	transform: rotate(360deg);
+}
+
+.footer{
+	background-color: #160A47;
+	font-size: 20px;
+	color: white;
+}
+
+.margin-cus{
+	margin: 5%;
+}
+
+.cus-bold-data{
+	color: #F2671F;
+	font-size: 20px;
+	background: #FFFFD7;
+}
+
+.cus-height-data{
+	min-height: 300px;
+}
